@@ -1,3 +1,11 @@
+<%-- 
+    Document   : catelory
+    Created on : Jul 11, 2022, 8:55:27 PM
+    Author     : ACER
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
