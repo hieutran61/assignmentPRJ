@@ -37,58 +37,7 @@
     <!-- Preloader End -->
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="navbar navbar-expand-lg">
-                        <!-- Logo -->
-                        <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt="Logo"></a>
-                        <!-- Navbar Toggler -->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#worldNav" aria-controls="worldNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                        <!-- Navbar -->
-                        <div class="collapse navbar-collapse" id="worldNav">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="index.html">Home</a>
-                                        <a class="dropdown-item" href="catagory.html">Catagory</a>
-                                        <a class="dropdown-item" href="single-blog.html">Single Blog</a>
-                                        <a class="dropdown-item" href="regular-page.html">Regular Page</a>
-                                        <a class="dropdown-item" href="contact.html">Contact</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Gadgets</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Lifestyle</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Video</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
-                                </li>
-                            </ul>
-                            <!-- Search Form  -->
-                            <div id="search-wrapper">
-                                <form action="#">
-                                    <input type="text" id="search" placeholder="Search something...">
-                                    <div id="close-icon"></div>
-                                    <input class="d-none" type="submit" value="">
-                                </form>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+    <jsp:include page="Header.jsp"></jsp:include>
     <!-- ***** Header Area End ***** -->
 
     <!-- ********** Hero Area Start ********** -->
@@ -713,174 +662,24 @@
                     </div>
                 </div>
 
-                <!-- ========== Sidebar Area ========== -->
-                <div class="col-12 col-md-8 col-lg-4">
-                    <div class="post-sidebar-area">
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">About World</h5>
-                            <div class="widget-content">
-                                <p>The mango is perfect in that it is always yellow and if it’s not, I don’t want to hear about it. The mango’s only flaw, and it’s a minor one, is the effort it sometimes takes to undress the mango, carve it up in a way that makes sense, and find its way to the mouth.</p>
-                            </div>
-                        </div>
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Top Stories</h5>
-                            <div class="widget-content">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/blog-img/b11.jpg" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="#" class="headline">
-                                            <h5 class="mb-0">How Did van Gogh’s Turbulent Mind Depict One of the Most</h5>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/blog-img/b13.jpg" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="#" class="headline">
-                                            <h5 class="mb-0">How Did van Gogh’s Turbulent Mind Depict One of the Most</h5>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/blog-img/b14.jpg" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="#" class="headline">
-                                            <h5 class="mb-0">How Did van Gogh’s Turbulent Mind Depict One of the Most</h5>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/blog-img/b10.jpg" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="#" class="headline">
-                                            <h5 class="mb-0">How Did van Gogh’s Turbulent Mind Depict One of the Most</h5>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/blog-img/b12.jpg" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="#" class="headline">
-                                            <h5 class="mb-0">How Did van Gogh’s Turbulent Mind Depict One of the Most</h5>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Stay Connected</h5>
-                            <div class="widget-content">
-                                <div class="social-area d-flex justify-content-between">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                    <a href="#"><i class="fa fa-vimeo"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-google"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Today’s Pick</h5>
-                            <div class="widget-content">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post todays-pick">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="img/blog-img/b22.jpg" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content px-0 pb-0">
-                                        <a href="#" class="headline">
-                                            <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- ========== right page ========== -->
+            <jsp:include page="rightpage.jsp"></jsp:include>
+                
             </div>
 
-            <!-- Load More btn -->
+<!--             Load More btn 
             <div class="row">
                 <div class="col-12">
                     <div class="load-more-btn mt-50 text-center">
                         <a href="#" class="btn world-btn">Load More</a>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 
     <!-- ***** Footer Area Start ***** -->
-    <footer class="footer-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <div class="footer-single-widget">
-                        <a href="#"><img src="img/core-img/logo.png" alt=""></a>
-                        <div class="copywrite-text mt-30">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> 
-<p>Proudly distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="footer-single-widget">
-                        <ul class="footer-menu d-flex justify-content-between">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Fashion</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Gadgets</a></li>
-                            <li><a href="#">Video</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="footer-single-widget">
-                        <h5>Subscribe</h5>
-                        <form action="#" method="post">
-                            <input type="email" name="email" id="email" placeholder="Enter your mail">
-                            <button type="button"><i class="fa fa-arrow-right"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <jsp:include page="footer.jsp"></jsp:include>
     <!-- ***** Footer Area End ***** -->
 
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
