@@ -44,9 +44,9 @@
                         <div class="collapse navbar-collapse" id="worldNav">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item dropdown">
+<!--                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="index.html">Home</a>
@@ -55,28 +55,40 @@
                                         <a class="dropdown-item" href="regular-page.html">Regular Page</a>
                                         <a class="dropdown-item" href="contact.html">Contact</a>
                                     </div>
+                                </li>-->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Thời sự</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Gadgets</a>
+                                    <a class="nav-link" href="#">Công nghệ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Lifestyle</a>
+                                    <a class="nav-link" href="#">Văn hoá</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Video</a>
+                                    <a class="nav-link" href="#">Giáo dục</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Contact</a>
+                                    <a class="nav-link" href="#">Du lịch</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sức khoẻ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Xe</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Thế giới</a>
                                 </li>
                             </ul>
-                            <!-- Search Form  -->
+<!--                             Search Form  
                             <div id="search-wrapper">
                                 <form action="#">
                                     <input type="text" id="search" placeholder="Search something...">
                                     <div id="close-icon"></div>
                                     <input class="d-none" type="submit" value="">
                                 </form>
-                            </div>
+                            </div>-->
                         </div>
                     </nav>
                 </div>
@@ -91,8 +103,8 @@
             <div class="row h-100 align-items-center justify-content-center">
                 <div class="col-12 col-md-8 col-lg-6">
                     <div class="single-blog-title text-center">
-                        <!-- Catagory -->
-                        <div class="post-cta"><a href="#">travel</a></div>
+<!--                         Catagory 
+                        <div class="post-cta"><a href="#">travel</a></div>-->
                         <h3>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h3>
                     </div>
                 </div>
@@ -149,7 +161,7 @@
                         </div>
                         <!-- Widget Area -->
                         <div class="sidebar-widget-area">
-                            <h5 class="title">Top Stories</h5>
+                            <h5 class="title">Đọc nhiều</h5>
                             <div class="widget-content">
                                 <!-- Single Blog Post -->
                                 <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
@@ -220,10 +232,10 @@
                         </div>
                         <!-- Widget Area -->
                         <div class="sidebar-widget-area">
-                            <h5 class="title">Stay Connected</h5>
+                            <h5 class="title">Kết nối</h5>
                             <div class="widget-content">
                                 <div class="social-area d-flex justify-content-between">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.facebook.com/hieutr61"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
                                     <a href="#"><i class="fa fa-pinterest"></i></a>
                                     <a href="#"><i class="fa fa-vimeo"></i></a>
@@ -232,17 +244,17 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Widget Area -->
+<!--                         Widget Area 
                         <div class="sidebar-widget-area">
                             <h5 class="title">Today’s Pick</h5>
                             <div class="widget-content">
-                                <!-- Single Blog Post -->
+                                 Single Blog Post 
                                 <div class="single-blog-post todays-pick">
-                                    <!-- Post Thumbnail -->
+                                     Post Thumbnail 
                                     <div class="post-thumbnail">
                                         <img src="img/blog-img/b22.jpg" alt="">
                                     </div>
-                                    <!-- Post Content -->
+                                     Post Content 
                                     <div class="post-content px-0 pb-0">
                                         <a href="#" class="headline">
                                             <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
@@ -250,29 +262,29 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
 
-            <!-- ============== Related Post ============== -->
+<!--             ============== Related Post ============== 
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <!-- Single Blog Post -->
+                     Single Blog Post 
                     <div class="single-blog-post">
-                        <!-- Post Thumbnail -->
+                         Post Thumbnail 
                         <div class="post-thumbnail">
                             <img src="img/blog-img/b1.jpg" alt="">
-                            <!-- Catagory -->
+                             Catagory 
                             <div class="post-cta"><a href="#">travel</a></div>
                         </div>
-                        <!-- Post Content -->
+                         Post Content 
                         <div class="post-content">
                             <a href="#" class="headline">
                                 <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
                             </a>
                             <p>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in...</p>
-                            <!-- Post Meta -->
+                             Post Meta 
                             <div class="post-meta">
                                 <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
                             </div>
@@ -281,21 +293,21 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4">
-                    <!-- Single Blog Post -->
+                     Single Blog Post 
                     <div class="single-blog-post">
-                        <!-- Post Thumbnail -->
+                         Post Thumbnail 
                         <div class="post-thumbnail">
                             <img src="img/blog-img/b2.jpg" alt="">
-                            <!-- Catagory -->
+                             Catagory 
                             <div class="post-cta"><a href="#">travel</a></div>
                         </div>
-                        <!-- Post Content -->
+                         Post Content 
                         <div class="post-content">
                             <a href="#" class="headline">
                                 <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
                             </a>
                             <p>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in...</p>
-                            <!-- Post Meta -->
+                             Post Meta 
                             <div class="post-meta">
                                 <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
                             </div>
@@ -304,64 +316,63 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-4">
-                    <!-- Single Blog Post -->
+                     Single Blog Post 
                     <div class="single-blog-post">
-                        <!-- Post Thumbnail -->
+                         Post Thumbnail 
                         <div class="post-thumbnail">
                             <img src="img/blog-img/b7.jpg" alt="">
-                            <!-- Catagory -->
+                             Catagory 
                             <div class="post-cta"><a href="#">travel</a></div>
-                            <!-- Video Button -->
+                             Video Button 
                             <a href="https://www.youtube.com/watch?v=IhnqEwFSJRg" class="video-btn"><i class="fa fa-play"></i></a>
                         </div>
-                        <!-- Post Content -->
+                         Post Content 
                         <div class="post-content">
                             <a href="#" class="headline">
                                 <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
                             </a>
                             <p>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in...</p>
-                            <!-- Post Meta -->
+                             Post Meta 
                             <div class="post-meta">
                                 <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <div class="row">
                 <div class="col-12 col-lg-8">
                     <div class="post-a-comment-area mt-70">
-                        <h5>Get in Touch</h5>
-                        <!-- Contact Form -->
+                        <h5>Bình luận</h5> 
                         <form action="#" method="post">
                             <div class="row">
-                                <div class="col-12 col-md-6">
+<!--                                <div class="col-12 col-md-6">
                                     <div class="group">
                                         <input type="text" name="name" id="name" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>Enter your name</label>
                                     </div>
-                                </div>
-                                <div class="col-12 col-md-6">
+                                </div>-->
+<!--                                <div class="col-12 col-md-6">
                                     <div class="group">
                                         <input type="email" name="email" id="email" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>Enter your email</label>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="col-12">
                                     <div class="group">
                                         <textarea name="message" id="message" required></textarea>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
-                                        <label>Enter your comment</label>
+                                        <label>Nhập bình luận</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn world-btn">Post comment</button>
+                                    <button type="submit" class="btn world-btn">Đăng</button>
                                 </div>
                             </div>
                         </form>
@@ -369,14 +380,12 @@
                 </div>
 
                 <div class="col-12 col-lg-8">
-                    <!-- Comment Area Start -->
                     <div class="comment_area clearfix mt-70">
                         <ol>
-                            <!-- Single Comment Area -->
                             <li class="single_comment_area">
-                                <!-- Comment Content -->
+                                 Comment Content 
                                 <div class="comment-content">
-                                    <!-- Comment Meta -->
+                                     Comment Meta 
                                     <div class="comment-meta d-flex align-items-center justify-content-between">
                                         <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
                                         <a href="#" class="comment-reply btn world-btn">Reply</a>
@@ -385,9 +394,9 @@
                                 </div>
                                 <ol class="children">
                                     <li class="single_comment_area">
-                                        <!-- Comment Content -->
+                                         Comment Content 
                                         <div class="comment-content">
-                                            <!-- Comment Meta -->
+                                             Comment Meta 
                                             <div class="comment-meta d-flex align-items-center justify-content-between">
                                                 <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
                                                 <a href="#" class="comment-reply btn world-btn">Reply</a>
@@ -398,11 +407,11 @@
                                 </ol>
                             </li>
                             
-                            <!-- Single Comment Area -->
+                             Single Comment Area 
                             <li class="single_comment_area">
-                                <!-- Comment Content -->
+                                 Comment Content 
                                 <div class="comment-content">
-                                    <!-- Comment Meta -->
+                                     Comment Meta 
                                     <div class="comment-meta d-flex align-items-center justify-content-between">
                                         <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
                                         <a href="#" class="comment-reply btn world-btn">Reply</a>
