@@ -91,38 +91,23 @@
                         <!-- Catagory Area -->
                         <div class="world-catagory-area">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="title">Don’t Miss</li>
-
+                                <li class="title">Đừng bỏ lỡ</li>
                                 <li class="nav-item">
                                     <a class="nav-link active" id="tab1" data-toggle="tab" href="#world-tab-1" role="tab" aria-controls="world-tab-1" aria-selected="true">All</a>
                                 </li>
-
+                                <c:forEach items="${aAllCategory}" var="i" varStatus="status" begin="0" end="4">
                                 <li class="nav-item">
-                                    <a class="nav-link" id="tab2" data-toggle="tab" href="#world-tab-2" role="tab" aria-controls="world-tab-2" aria-selected="false">Style hunter</a>
+                                    <a class="nav-link" id="tab${status.count+1}" data-toggle="tab" href="#world-tab-${status.count+1}" role="tab" aria-controls="world-tab-${status.count+1}" aria-selected="false">${i.cateName}</a>
                                 </li>
+                                </c:forEach>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" id="tab3" data-toggle="tab" href="#world-tab-3" role="tab" aria-controls="world-tab-3" aria-selected="false">Vogue</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" id="tab4" data-toggle="tab" href="#world-tab-4" role="tab" aria-controls="world-tab-4" aria-selected="false">Health &amp; Fitness</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" id="tab5" data-toggle="tab" href="#world-tab-5" role="tab" aria-controls="world-tab-5" aria-selected="false">Travel</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" id="tab6" data-toggle="tab" href="#world-tab-6" role="tab" aria-controls="world-tab-6" aria-selected="false">Gadgets</a>
-                                </li>
-
+                                                      
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                                     <div class="dropdown-menu">
-                                        <a class="nav-link" id="tab7" data-toggle="tab" href="#world-tab-7" role="tab" aria-controls="world-tab-7" aria-selected="false">Sports</a>
-                                        <a class="nav-link" id="tab8" data-toggle="tab" href="#world-tab-8" role="tab" aria-controls="world-tab-8" aria-selected="false">Politices</a>
-                                        <a class="nav-link" id="tab9" data-toggle="tab" href="#world-tab-9" role="tab" aria-controls="world-tab-9" aria-selected="false">Features</a>
+                                        <c:forEach items="${aAllCategory}" var="i" varStatus="status" begin="5"> 
+                                        <a class="nav-link" id="tab${status.count+6}" data-toggle="tab" href="#world-tab-${status.count+6}" role="tab" aria-controls="world-tab-${status.count+6}" aria-selected="false">${i.cateName}</a>
+                                        </c:forEach>
                                     </div>
                                 </li>
                             </ul>
