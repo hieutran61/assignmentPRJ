@@ -35,7 +35,6 @@ public class ArticleServlet extends HttpServlet {
         request.setAttribute("aTopStories", aTopStories);
         request.setAttribute("aAllCategory", aAllCategory);
         
-        System.out.println(aAllCategory);
         
         request.getRequestDispatcher("index.jsp").forward(request, response);
         
