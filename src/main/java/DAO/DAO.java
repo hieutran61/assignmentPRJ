@@ -134,7 +134,26 @@ public class DAO {
         return null;
     }
     //END DAO CATEGORY
-    
+    public void addAccount(String username, String password, String fullname, String role, String status)
+    {
+	String sql = "INSERT INTO ACCOUNT\n" +
+                    "VALUES (?, ?, ?, ?, ?);";
+	
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, username);
+            stm.setString(2, password);
+            stm.setString(3, fullname);
+            stm.setString(4, role);
+            stm.setString(5, status);
+            stm.executeUpdate();
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
     
     public static void main(String[] args) {
