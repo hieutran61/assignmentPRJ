@@ -48,6 +48,7 @@
                         <!-- Contact Form -->
                         <form action="updateAccount" method="post" enctype="multipart/form-data">
                             <div class="row">
+                                <input type="text" name="mk" value="${acc.password}" hidden>
                                 <div class="col-12">
                                     <div class="group">
                                         <input type="text" class="form-control" name="username" placeholder="Tên đăng nhập" value="${acc.username}" readonly>

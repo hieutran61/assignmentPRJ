@@ -18,7 +18,7 @@
                 <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
                     <!-- Post Thumbnail -->
                     <div class="post-thumbnail">
-                        <img src="img/blog-img/b11.jpg" alt="">
+                        <img src="images/${i.image}" alt="">
                     </div>
                     <!-- Post Content -->
                     <div class="post-content">

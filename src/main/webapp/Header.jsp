@@ -13,54 +13,11 @@
                         <!-- Navbar -->
                         <div class="collapse navbar-collapse" id="worldNav">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="home">Trang Chủ <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item" >
-                                    <a class="nav-link" href="createNews" style="color: blue">Viết Bài</a>
-                                </li>
-<!--                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="catelory.jsp">Catelory</a>
-                                        <a class="dropdown-item" href="single-blog.jsp">Single Blog</a>
-                                        <a class="dropdown-item" href="regular-page.jsp">Regular Page</a>
-                                        <a class="dropdown-item" href="contact.jsp">Contact</a>
-                                    </div>
-                                </li>-->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Thời sự</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Công nghệ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Văn hoá</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Giáo dục</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Du lịch</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Sức khoẻ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Xe</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Thế giới</a>
+ 
+                                <li class="nav-item active" >
+                                    <a class="nav-link" href="createNews">Viết Bài</a>
                                 </li>
                             </ul>
-<!--                             Search Form  
-                            <div id="search-wrapper">
-                                <form action="#">
-                                    <input type="text" id="search" placeholder="Search something...">
-                                    <div id="close-icon"></div>
-                                    <input class="d-none" type="submit" value="">
-                                </form>
-                            </div>-->
                             <div class="btn-group">
                                 <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
                                     <img width="35" class="rounded-circle" src="images/6.png" alt="">
