@@ -206,6 +206,7 @@ public class DAO {
             e.printStackTrace();
         }
     }
+    
      public List<Account> getAllAccount() throws SQLException
     {
 	List<Account> list = new ArrayList<>();
@@ -228,6 +229,7 @@ public class DAO {
         }
         return null;
     }
+     
     public Account getAccount(String username)
     {
 	String sql = "select * from ACCOUNT where username = ?";
@@ -247,28 +249,55 @@ public class DAO {
         }
 	return null;
     }
+    
     public void updateAccount(String username, String password, String fullname,String avatar, String role, String status)
     {
-	String sql = "UPDATE ACCOUNT\n" +
-                    "SET Password = ?, Fullname = ?, Avatar=?, Role = ?, Status = ?\n" +
-                    "WHERE Username = ?;";
-	
-	try 
+        if (!avatar.equals(""))
         {
-            con = DBUtils.makeConnection();
-            stm = con.prepareStatement(sql);
-	    stm.setString(1, password);
-            stm.setString(2, fullname);
-            stm.setString(3, avatar);
-            stm.setString(4, role);
-            stm.setString(5, status);
-            stm.setString(6, username);
-                        
-            stm.executeUpdate();
+            String sql = "UPDATE ACCOUNT\n" +
+                        "SET Password = ?, Fullname = ?, Avatar=?, Role = ?, Status = ?\n" +
+                        "WHERE Username = ?;";
 
-        } 
-	catch (Exception e) {
-            e.printStackTrace();
+            try 
+            {
+                con = DBUtils.makeConnection();
+                stm = con.prepareStatement(sql);
+                stm.setString(1, password);
+                stm.setString(2, fullname);
+                stm.setString(3, avatar);
+                stm.setString(4, role);
+                stm.setString(5, status);
+                stm.setString(6, username);
+
+                stm.executeUpdate();
+
+            } 
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            String sql = "UPDATE ACCOUNT\n" +
+                        "SET Password = ?, Fullname = ?, Role = ?, Status = ?\n" +
+                        "WHERE Username = ?;";
+
+            try 
+            {
+                con = DBUtils.makeConnection();
+                stm = con.prepareStatement(sql);
+                stm.setString(1, password);
+                stm.setString(2, fullname);
+                stm.setString(3, role);
+                stm.setString(4, status);
+                stm.setString(5, username);
+
+                stm.executeUpdate();
+
+            } 
+            catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
     

@@ -20,8 +20,8 @@ import javax.servlet.http.Part;
 import model.Account;
 
 @MultipartConfig
-@WebServlet(name = "updateAccountServlet", urlPatterns = {"/updateAccount"})
-public class updateAccountServlet extends HttpServlet {
+@WebServlet(name = "UpdateAccountServlet", urlPatterns = {"/updateAccount"})
+public class UpdateAccountServlet extends HttpServlet {
 
 
    
@@ -45,15 +45,15 @@ public class updateAccountServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String mk = request.getParameter("mk");
         String username = request.getParameter("username");
         String old_password = request.getParameter("old-password");
         String new_password = request.getParameter("new-password");
-         String re_password = request.getParameter("re-password");
+        String re_password = request.getParameter("re-password");
         String fullname = request.getParameter("fullname");
         String avatar= "";
         String role = request.getParameter("role");
         String status = request.getParameter("status");
-        System.out.println("begin UPDATEACCOUNT");
         Part part = request.getPart("avatar");
         
         //Upload Image
@@ -70,9 +70,20 @@ public class updateAccountServlet extends HttpServlet {
             avatar = fileName;
         }
         
+        if (new_password.equals("") || old_password.equals("") || re_password.equals(""))
+        {
+            new_password = mk;
+            old_password = mk;
+            re_password = mk;
+        }
         
         DAO dao = new DAO();
-        dao.updateAccount(username, , fullname,avatar, role, status);   
+        if (old_password.equals(dao.getAccount(username).getPassword()))
+        {
+            if (new_password.equals(re_password))
+                dao.updateAccount(username, new_password, fullname, avatar, role, status);
+        }
+
         response.sendRedirect("accManager");
         
     }
