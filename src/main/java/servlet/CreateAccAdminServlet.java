@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(name = "CreateAccAdminServlet", urlPatterns = {"/CreateAccAdminServlet"})
+@WebServlet(name = "CreateAccAdminServlet", urlPatterns = {"/createAcc"})
 public class CreateAccAdminServlet extends HttpServlet {
   
     @Override
@@ -21,7 +21,6 @@ public class CreateAccAdminServlet extends HttpServlet {
             throws ServletException, IOException {
          response.setContentType("text/html;charset=UTF-8");
          request.setCharacterEncoding("utf-8");
-         response.setContentType("text/html;charset=UTF-8");
          
         request.getRequestDispatcher("createAccAdmin.jsp").forward(request, response);
     }
@@ -32,7 +31,6 @@ public class CreateAccAdminServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
-        response.setContentType("text/html;charset=UTF-8");
         
         String account = request.getParameter("username");
         String password = request.getParameter("password");
@@ -43,7 +41,7 @@ public class CreateAccAdminServlet extends HttpServlet {
         
         DAO dao = new DAO();
         dao.addAccount(account, password, fullname, role, status);   
-//        response.sendRedirect("");
+        response.sendRedirect("home");
     }
 
     
