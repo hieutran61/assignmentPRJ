@@ -10,6 +10,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.Account;
 import model.Article;
 import model.Comment;
 
@@ -23,15 +25,30 @@ public class ReadArticleServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
         
+        HttpSession session = request.getSession();
         String articleId = request.getParameter("articleId");
+        Boolean isLike = false;
         DAO dao = new DAO();
+        
         Article article = dao.getArticle(articleId);
         List<Comment> aComment = dao.getAllCommentOfArticle(articleId);
         List<Article> aTopStories = dao.getTopStories();
+        if (session.getAttribute("acc") != null)
+        {
+            if (dao.getLike(articleId, ((Account)session.getAttribute("acc")).getUsername()) != null)
+            {
+                isLike = true;
+            }
+            else
+            {
+                isLike = false;
+            }
+        }
         
         request.setAttribute("article", article);
         request.setAttribute("aTopStories", aTopStories);
         request.setAttribute("aComment", aComment);
+        request.setAttribute("isLike", isLike);
         request.getRequestDispatcher("single-blog.jsp").forward(request, response);   
     }
 

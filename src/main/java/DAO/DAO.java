@@ -14,6 +14,7 @@ import model.Account;
 import model.Article;
 import model.Category;
 import model.Comment;
+import model.Like;
 
 public class DAO {
     Connection con = null;
@@ -160,7 +161,97 @@ public class DAO {
             e.printStackTrace();
         }
     }
+    
+    public void updateAddLike(String articleId)
+    {
+	String sql = "UPDATE ARTICLE\n" +
+                    "SET [Likes] = [Likes] +1\n" +
+                    "WHERE ArticleID= ?;";
+	
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, articleId);       
+            stm.executeUpdate();
+
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void updateUnLike(String articleId)
+    {
+	String sql = "UPDATE ARTICLE\n" +
+                    "SET [Likes] = [Likes] -1\n" +
+                    "WHERE ArticleID= ?;";
+	
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, articleId);       
+            stm.executeUpdate();
+
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void updateArticle(String articleId, String title, String description, String content, String image, String cateId)
+    {
+        if (!image.equals(""))
+        {
+            String sql = "UPDATE ARTICLE\n" +
+                        "SET Title = ?, Description = ?, Content = ?, Image = ?, CateID = ?\n" +
+                        "WHERE ArticleID= ?;";
+
+            try 
+            {
+                con = DBUtils.makeConnection();
+                stm = con.prepareStatement(sql);
+                stm.setString(1, title);
+                stm.setString(2, description);
+                stm.setString(3, content);
+                stm.setString(4, image);
+                stm.setString(5, cateId);
+                stm.setString(6, articleId);
+
+                stm.executeUpdate();
+
+            } 
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            String sql = "UPDATE ARTICLE\n" +
+                        "SET Title = ?, Description = ?, Content = ?, CateID = ?\n" +
+                        "WHERE ArticleID= ?;";
+
+            try 
+            {
+                con = DBUtils.makeConnection();
+                stm = con.prepareStatement(sql);
+                stm.setString(1, title);
+                stm.setString(2, description);
+                stm.setString(3, content);
+                stm.setString(4, cateId);
+                stm.setString(5, articleId);
+
+                stm.executeUpdate();
+
+            } 
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
     //END DAO ARTICLE
+    
     
     //BEGIN DAO CATEGORY
     public List<Category> getAllCategory()
@@ -403,11 +494,72 @@ public class DAO {
     //END DAO COMMENT
     
     
+    //BEGIN DAO LIKE
+    public Like getLike(String articleId, String username)
+    {
+	String sql = "select * from [LIKE] where ArticleID = ? and username = ? ";
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, articleId);
+            stm.setString(2, username);
+            rs = stm.executeQuery();               
+            while (rs.next())
+            {
+                return (Like)new Like(rs.getInt(1), rs.getString(2), rs.getString(3));  
+            }
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+	return null;
+    }
+    
+    public void addLike(String articleId, String username)
+    {
+	String sql = "INSERT INTO [LIKE]\n" +
+                    "VALUES (?, ?);";
+	
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, articleId);
+            stm.setString(2, username);
+            stm.executeUpdate();
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void deleteLike(String articleId, String username)
+    {
+	String sql = "DELETE FROM [LIKE] WHERE ArticleID = ? and Username = ?";
+	
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, articleId);       
+            stm.setString(2, username);
+            stm.executeUpdate();
+
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    //END DAO LIKE
+    
+    
     
     
     public static void main(String[] args) {
         DAO dao = new DAO();
-        System.out.println(dao.getArticle3Days());
+        dao.addLike("21", "hieu");
+        
     }
 
     

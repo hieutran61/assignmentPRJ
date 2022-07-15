@@ -74,7 +74,7 @@
                                                 <input type="file" name="image" placeholder="Chọn ảnh cho bài viết" required>
                                             </div>
                                         </div>
-                                        <input type="text" name="author" value="${sessionScope.acc.username}">
+                                        <input type="text" name="author" value="${sessionScope.acc.username}" hidden>
                                         <div class="col-12">
                                             <div class="">
                                             <label>Chọn thể loại cho bài viết</label>

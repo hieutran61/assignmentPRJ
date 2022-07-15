@@ -70,7 +70,7 @@
                             <!-- Post Meta -->
                             <div class="post-meta second-part">
                                 <p class="likebtn">
-                                    <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span> Love it</a>
+                                    <a href="likes?articleId=${article.articleId}&username=${sessionScope.acc.username}" title="Love it" class="btn btn-counter ${isLike ? "active":""}" data-count="${article.likes}"><span>&#x2764;</span> Love it</a>
                                 </p>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
     <!-- Like Button js -->
-    <script src="js/likeButton.js"></script>
+    <%-- <script src="js/likeButton.js"></script> --%>
 </body>
 
 </html>

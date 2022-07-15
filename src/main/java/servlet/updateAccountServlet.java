@@ -31,13 +31,8 @@ public class updateAccountServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
        
-        
-            String username = request.getParameter("username");
-            DAO dao = new DAO();
-            Account acc = dao.getAccount(username);
-            request.setAttribute("acc", acc);
 
-            request.getRequestDispatcher("updateAccount.jsp").forward(request, response);
+        request.getRequestDispatcher("updateAccount.jsp").forward(request, response);
         
           
     }

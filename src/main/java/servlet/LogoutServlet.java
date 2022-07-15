@@ -30,13 +30,15 @@ public class LogoutServlet extends HttpServlet {
         
         HttpSession session = request.getSession();
         session.removeAttribute("acc");
-        response.sendRedirect("login");
+        response.sendRedirect("home");
     }
 
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
         
     }
 

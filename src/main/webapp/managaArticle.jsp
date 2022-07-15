@@ -11,14 +11,8 @@
     <body>
         <div class="container">
             <nav class="navbar navbar-light bg-light">
-                <form class="form-inline">
-                   
-                        <a role="button" class="btn btn-secondary" href="login">Login</a>               
-
-                   
-                        <a role="button" class="btn btn-secondary"  href="logout">Logout</a>    
-                        <a role="button">hello </a>             
-                   
+                <form class="form-inline"> 
+                        <a role="button">Hello ${sessionScope.acc.username} </a>             
                 </form>
             </nav>
             <table class="table table-hover">
@@ -30,8 +24,9 @@
                         <td>Image</td>
                         <td>Author</td>       
                         <td>TimePost</td>
-                         <td>Like</td>
+                        <td>Like</td>
                         <td>CateId</td>
+                        <td></td>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,25 +35,24 @@
                         <td>${i.articleId}</td>
                         <td>${i.title}</td>
                         <td>${i.description}</td>                       
-                        <td><img src="images/${i.image}" class="img-thumbnail" width="100px"></td>
+                        <td><img src="images/${i.image}" class="img-thumbnail" width="800px"></td>
                         <td>${i.author}</td>
                         <td>${i.timePost}</td>
                         <td>${i.likes}</td>
                         <td>${i.cateId}</td>
-                     
-                            <td>
-                                <a role="button" class="btn btn-secondary"  href="updateProduct?articleId=${i.articleId}">Update</a>
-                                <a role="button" class="btn btn-secondary"  href="DeleteArticle?articleId=${i.articleId}">Delete</a>
-                            </td>
+                        <td>
+                            <a role="button" class="btn btn-secondary" href="updateArticle?articleId=${i.articleId}" style="margin-bottom: 15px;">Update</a>
+                            <a role="button" class="btn btn-secondary" href="DeleteArticle?articleId=${i.articleId}">Delete</a>
+                        </td>
                        
                     </tr>
                     </c:forEach>
                 </tbody>
             </table>
             
-                <a role="button" class="btn btn-secondary"  href="createNews">Tạo bài báo mới</a>
+            <a role="button" class="btn btn-secondary" href="createNews">Tạo bài báo mới</a>
             
-            <a role="button" class="btn btn-secondary"  href="home">home</a>
+            <a role="button" class="btn btn-primary" href="home">HOME</a>
 
         </div>
     </body>

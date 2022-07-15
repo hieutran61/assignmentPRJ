@@ -43,11 +43,12 @@
                             <div class="contact-form">
                                 <h5>Sửa lại bài viết</h5>
                                 <!-- Write news form -->
-                                <form action="#" method="post">
+                                <form action="updateArticle" method="post" enctype="multipart/form-data">
+                                    <input type="text" name="articleId" value="${article.articleId}" hidden>
                                     <div class="column">
                                         <div class="col-12 col-md-12">
                                             <div class="group">
-                                                <input type="text" name="title" id="name" required>
+                                                <input type="text" name="title" id="name" value="${article.title}" required>
                                                 <span class="highlight"></span>
                                                 <span class="bar"></span>
                                                 <label>Tiêu đề mới...</label>
@@ -55,7 +56,7 @@
                                         </div>
                                         <div class="col-12 col-md-12">
                                             <div class="group">
-                                                <input type="text" name="description" required>
+                                                <input type="text" name="description" value="${article.description}" required>
                                                 <span class="highlight"></span>
                                                 <span class="bar"></span>
                                                 <label>Mô tả mới cho bài viết...</label>
@@ -63,7 +64,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="group">
-                                                <textarea style="height: 175px" name="message" id="message" required></textarea>
+                                                <textarea style="height: 175px" name="content" id="message" required>${article.content}</textarea>
                                                 <span class="highlight"></span>
                                                 <span class="bar"></span>
                                                 <label>Nội dung bài viết...</label>
@@ -71,21 +72,23 @@
                                         </div>
                                         <div class="col-12" style="margin-bottom: 25px">
                                             <div class="">
-                                                <input type="file" placeholder="Chọn ảnh cho bài viết">
+                                                <img src="images/${article.image}" alt="" style="width: 350px; height:190px">
+                                                <input name="image" type="file" placeholder="Chọn ảnh cho bài viết">
                                             </div>
                                         </div>
+
                                         <div class="col-12">
                                             <div class="">
                                                 <label>Chọn lại thể loại cho bài viết</label>
-                                                <select name="category">
-                                                    <option value="thoisu">Thời sự</option>
-                                                    <option value="congnghe">Công nghệ</option>
-                                                    <option value="vanhoa">Văn hóa</option>
-                                                    <option value="giaoduc">Giáo dục</option>
-                                                    <option value="dulich">Du lịch</option>
-                                                    <option value="suckhoe">Sức khỏe</option>
-                                                    <option value="xe">Xe</option>
-                                                    <option value="thegioi">Thế giới</option>
+                                                <select name="cateId">
+                                                    <option value="1" ${article.cateId==1 ? "selected":""}>Thời sự</option>
+                                                    <option value="2" ${article.cateId==2 ? "selected":""}>Công nghệ</option>
+                                                    <option value="3" ${article.cateId==3 ? "selected":""}>Văn hóa</option>
+                                                    <option value="4" ${article.cateId==4 ? "selected":""}>Giáo dục</option>
+                                                    <option value="5" ${article.cateId==5 ? "selected":""}>Du lịch</option>
+                                                    <option value="6" ${article.cateId==6 ? "selected":""}>Sức khỏe</option>
+                                                    <option value="7" ${article.cateId==7 ? "selected":""}>Xe</option>
+                                                    <option value="8" ${article.cateId==8 ? "selected":""}>Thế giới</option>
                                                 </select><br>
                                             </div>
                                         </div>

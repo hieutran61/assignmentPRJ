@@ -31,8 +31,9 @@
                                 </a>
                                 <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">                                
                                     <button type="button" tabindex="0" class="dropdown-item" ><a href="updateAccount?username=${i.username}">Cài đặt tài khoản</a></button>
+                                    <button type="button" tabindex="0" class="dropdown-item" ><a href="ManagerAriticle?username=${i.username}">Quản lý bài viết</a></button>
                                     <div tabindex="-1" class="dropdown-divider"></div>
-                                    <button type="button" tabindex="0" class="dropdown-item" href="logout"><a href="logout">Đăng xuất</a></button>
+                                    <button type="button" tabindex="0" class="dropdown-item"><a href="logout">Đăng xuất</a></button>
                                 </div>
                             </div>
                             </c:if>

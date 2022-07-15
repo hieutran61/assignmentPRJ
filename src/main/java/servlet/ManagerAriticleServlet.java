@@ -32,6 +32,7 @@ public class ManagerAriticleServlet extends HttpServlet {
            throws ServletException, IOException {
          response.setContentType("text/html;charset=UTF-8");
          request.setCharacterEncoding("utf-8");
+         
          DAO dao = new DAO();
          List<Article> list = dao.getAllArticle();
          request.setAttribute("list", list);
