@@ -40,7 +40,7 @@
                             <label>Avatar</label>
                             <input type="file" class="form-control" placeholder="Avatar">
                         </div>-->
-                        <button style="background-color: black" type="submit" class="btn btn-secondary">Đăng kí</button>
+                        <button style="background-color: blue" type="submit" class="btn btn-secondary">Đăng kí</button>
                     </form>
                 </div>
             </div>

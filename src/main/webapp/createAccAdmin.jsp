@@ -93,8 +93,9 @@
                                     <div class="group" >
                                         <h5>Quyền</h5>
                                         <select name="status" class="form-select">
-                                        <option value="1">admin</option>
-                                        <option value="0">user</option>
+                                        <option value="0">admin</option>
+                                        <option value="1">writer</option>
+                                        <option value="2">user</option>
                                         </select>                                      
                                     </div>
                                 </div>
