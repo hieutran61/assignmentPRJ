@@ -23,6 +23,7 @@ public class CreateNewsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+         request.setCharacterEncoding("utf-8");
         request.getRequestDispatcher("createNews.jsp").forward(request, response);
     }
 
@@ -31,6 +32,7 @@ public class CreateNewsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
         String title = request.getParameter("title");
         String description = request.getParameter("description");
         String content = request.getParameter("content");
