@@ -22,7 +22,7 @@
                     </div>
                     <!-- Post Content -->
                     <div class="post-content">
-                        <a href="#" class="headline">
+                        <a href="read?articleId=${i.articleId}" class="headline">
                             <h5 class="mb-0">${i.title}</h5>
                         </a>
                     </div>

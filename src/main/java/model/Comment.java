@@ -8,17 +8,21 @@ public class Comment {
     private int commentId;
     private int articleId;
     private String username;
+    private String Comment;
     private Timestamp timeComment;
 
     public Comment() {
     }
 
-    public Comment(int commentId, int articleId, String username, Timestamp timeComment) {
+    public Comment(int commentId, int articleId, String username, String Comment, Timestamp timeComment) {
         this.commentId = commentId;
         this.articleId = articleId;
         this.username = username;
+        this.Comment = Comment;
         this.timeComment = timeComment;
     }
+
+    
 
     public int getCommentId() {
         return commentId;
@@ -51,6 +55,16 @@ public class Comment {
     public void setTimeComment(Timestamp timeComment) {
         this.timeComment = timeComment;
     }
+
+    public String getComment() {
+        return Comment;
+    }
+
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+    
+    
     
     
     

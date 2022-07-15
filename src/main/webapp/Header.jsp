@@ -13,11 +13,18 @@
                         <!-- Navbar -->
                         <div class="collapse navbar-collapse" id="worldNav">
                             <ul class="navbar-nav ml-auto">
- 
+                                <c:if test="${sessionScope.acc != null}" >
                                 <li class="nav-item active" >
                                     <a class="nav-link" href="createNews">Viết Bài</a>
                                 </li>
+                                </c:if>
+                                <c:if test="${sessionScope.acc == null}" >
+                                <li class="nav-item active" >
+                                    <a class="nav-link" href="login">Đăng nhập</a>
+                                </li>
+                                </c:if>
                             </ul>
+                            <c:if test="${sessionScope.acc != null}" >
                             <div class="btn-group">
                                 <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
                                     <img width="35" class="rounded-circle" src="images/6.png" alt="">
@@ -29,6 +36,7 @@
                                     <button type="button" tabindex="0" class="dropdown-item">Đăng xuất</button>
                                 </div>
                             </div>
+                            </c:if>
                         </div>
                     </nav>
                 </div>

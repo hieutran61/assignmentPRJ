@@ -13,6 +13,7 @@ import java.util.List;
 import model.Account;
 import model.Article;
 import model.Category;
+import model.Comment;
 
 public class DAO {
     Connection con = null;
@@ -207,7 +208,7 @@ public class DAO {
         }
     }
     
-     public List<Account> getAllAccount() throws SQLException
+    public List<Account> getAllAccount() throws SQLException
     {
 	List<Account> list = new ArrayList<>();
 	String sql = "select * from ACCOUNT";
@@ -316,7 +317,24 @@ public class DAO {
             e.printStackTrace();
         }
     }
+     public void deleteArticle(String articleId)
+    {
+	String sql = "DELETE FROM ARTICLE WHERE ArticleId = ?";
+	
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, articleId);                     
+            stm.executeUpdate();
+
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
+   
     public Account login(String username, String password)
     {
         String sql = "select * from ACCOUNT where Username = ? and Password = ?";
@@ -338,6 +356,51 @@ public class DAO {
 	return null;
     }
     //END DAO ACCOUNT
+    
+    //BEGIN DAO COMMENT
+    public void addComment(String articleId, String username, String cmt, Timestamp timeComment)
+    {
+	String sql = "Insert into COMMENT\n" +
+                    "values (?, ?, ?, ?)";
+	
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, articleId);
+            stm.setString(2, username);
+            stm.setString(3, cmt);
+            stm.setTimestamp(4, timeComment);
+            stm.executeUpdate();
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+        
+    public List<Comment> getAllCommentOfArticle(String articleId)
+    {
+	List<Comment> list = new ArrayList<>();
+	String sql = "select * from COMMENT where ArticleID=? ORDER BY TimeComment DESC";
+	
+	try {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+            stm.setString(1, articleId);
+            rs = stm.executeQuery();               
+	
+            while (rs.next())
+            {
+                list.add((Comment) new Comment(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4), rs.getTimestamp(5)));
+            }
+            return list;
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    //END DAO COMMENT
     
     
     
