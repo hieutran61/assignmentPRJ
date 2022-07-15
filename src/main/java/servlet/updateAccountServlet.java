@@ -21,7 +21,7 @@ import model.Account;
 
 @MultipartConfig
 @WebServlet(name = "UpdateAccountServlet", urlPatterns = {"/updateAccount"})
-public class UpdateAccountServlet extends HttpServlet {
+public class updateAccountServlet extends HttpServlet {
 
 
    
