@@ -87,7 +87,9 @@
                     <div class="post-a-comment-area mt-70">
                         <h5>Bình luận</h5>
                         <!-- Comment Form -->
-                        <form action="comment" method="post">
+                        <form action="read" method="post">
+                            <input type="text" value="${sessionScope.acc.username}" name="username">
+                            <input type="text" name="articleId" value="${article.articleId}">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="group">
@@ -109,18 +111,19 @@
                     <!-- Comment Area Start -->
                     <div class="comment_area clearfix mt-70">
                         <ol>
+                            <c:forEach items="${aComment}" var="i">
                             <!-- Single Comment Area -->
                             <li class="single_comment_area">
                                 <!-- Comment Content -->
                                 <div class="comment-content">
                                     <!-- Comment Meta -->
                                     <div class="comment-meta d-flex align-items-center justify-content-between">
-                                        <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
-                                        <a href="#" class="comment-reply btn world-btn">Reply</a>
+                                        <p><a href="#" class="post-author">${i.username}</a> lúc <a href="#" class="post-date">${i.timeComment}</a></p>
                                     </div>
-                                    <p>Pick the yellow peach that looks like a sunset with its red, orange, and pink coat skin, peel it off with your teeth. Sink them into unripened...</p>
+                                    <p>${i.comment}</p>
                                 </div>
                             </li>
+                            </c:forEach>
                         </ol>
                     </div>
                 </div>
