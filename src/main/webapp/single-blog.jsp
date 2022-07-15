@@ -88,8 +88,8 @@
                         <h5>Bình luận</h5>
                         <!-- Comment Form -->
                         <form action="read" method="post">
-                            <input type="text" value="${sessionScope.acc.username}" name="username">
-                            <input type="text" name="articleId" value="${article.articleId}">
+                            <input type="text" value="${sessionScope.acc.username}" name="username" hidden>
+                            <input type="text" name="articleId" value="${article.articleId}" hidden>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="group">

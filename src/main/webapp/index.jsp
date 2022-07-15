@@ -127,7 +127,7 @@
                                                     </div>
                                                     <!-- Post Content -->
                                                     <div class="post-content">
-                                                        <a href="#" class="headline">
+                                                        <a href="read?articleId=${i.articleId}" class="headline">
                                                             <h5>${i.title}</h5>
                                                         </a>
                                                         <p>${i.description}</p>
@@ -151,7 +151,7 @@
                                                 </div>
                                                 <!-- Post Content -->
                                                 <div class="post-content">
-                                                    <a href="#" class="headline">
+                                                    <a href="read?articleId=${i.articleId}" class="headline">
                                                         <h5>${i.title}</h5>
                                                     </a>
                                                     <!-- Post Meta -->
@@ -167,32 +167,33 @@
                                     <div class="row mt-50">
                                         <div class="col-12">
                                             <div class="world-catagory-slider2 owl-carousel wow fadeInUpBig" data-wow-delay="0.4s">
-                                                ${(aArticle3Days.size()/6)+1}
-                                                <c:forEach begin="1" end="${(aArticle3Days.size()/6)+1}" >
+                                                <c:set var="dem" value="8"/>
+                                                <c:forEach begin="1" end="${(aArticle3Days.size()/6)}" >
                                                 <!-- ========= Single Catagory Slide ========= -->
                                                 <div class="single-cata-slide">
                                                     <div class="row">
-                                                    <c:set var="dem" value="8"/>
+                                                    
                                                         <c:forEach items="${aArticle3Days}" var="i" begin="${dem}" end="${((dem+5) < aArticle3Days.size()) ? (dem+5):aArticle3Days.size()}" >
                                                         <div class="col-12 col-md-6">
                                                             <!-- Single Blog Post -->
                                                             <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
                                                                 <!-- Post Thumbnail -->
                                                                 <div class="post-thumbnail">
-                                                                    <img src="images/1.jpg" alt="">
+                                                                    <img src="images/${i.image}" alt="" style="width: 97px; height: 97px">
                                                                 </div>
                                                                 <!-- Post Content -->
                                                                 <div class="post-content">
-                                                                    <a href="#" class="headline">
+                                                                    <a href="read?articleId=${i.articleId}" class="headline">
                                                                         <h5>${i.title}</h5>
                                                                     </a>
                                                                     <!-- Post Meta -->
                                                                     <div class="post-meta">
-                                                                        <p><a href="#" class="post-author">${i.author}</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
+                                                                        <p><a href="#" class="post-author">${i.author}</a> on <a href="#" class="post-date">${i.timePost}</a></p>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                         <c:set var="dem" value="${dem+1}"/>
                                                         </c:forEach>
                                                     </div>
@@ -222,7 +223,7 @@
                                                             </div>
                                                             <!-- Post Content -->
                                                             <div class="post-content">
-                                                                <a href="#" class="headline">
+                                                                <a href="read?articleId=${a.articleId}" class="headline">
                                                                     <h5>${a.title}</h5>
                                                                 </a>
                                                                 <p>${a.description}</p>
@@ -252,7 +253,7 @@
                                                         </div>
                                                         <!-- Post Content -->
                                                         <div class="post-content">
-                                                            <a href="#" class="headline">
+                                                            <a href="read?articleId=${a.articleId}" class="headline">
                                                                 <h5>${a.title}</h5>
                                                             </a>
                                                             <!-- Post Meta -->
@@ -287,7 +288,7 @@
                                                                     </div>
                                                                     <!-- Post Content -->
                                                                     <div class="post-content">
-                                                                        <a href="#" class="headline">
+                                                                        <a href="read?articleId=${i.articleId}" class="headline">
                                                                             <h5>${i.title}</h5>
                                                                         </a>
                                                                         <!-- Post Meta -->
@@ -337,7 +338,7 @@
                             </div>
                             <!-- Post Content -->
                             <div class="post-content">
-                                <a href="#" class="headline">
+                                <a href="read?articleId=${i.articleId}" class="headline">
                                     <h5>${i.title}</h5>
                                 </a>
                                 <p>${i.description}</p>
