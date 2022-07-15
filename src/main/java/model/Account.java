@@ -28,6 +28,14 @@ public class Account {
         this.status = status;
     }
 
+    public Account(String string, String string0, String string1, boolean aBoolean, boolean aBoolean0) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Account(String string, String string0, String string1, String string2) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public String getUsername() {
         return username;
     }

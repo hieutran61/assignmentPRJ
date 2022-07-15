@@ -11,14 +11,12 @@
     <body>
         <div class="container">
             <nav class="navbar navbar-light bg-light">
-                <form class="form-inline">
-                    <c:if test="${sessionScope.a==null}">
+                <form class="form-inline">                
                         <a role="button" class="btn btn-outline-success" href="login">Login</a>               
-                    </c:if>
-                    <c:if test="${sessionScope.a!=null}">
+                   
+                   
                         <a role="button" class="btn btn-outline-success" href="logout">Logout</a>    
-                        <a role="button" class="btn btn-sm btn-outline-secondary" href="#">hello ${sessionScope.a.username}</a>             
-                    </c:if>
+                        <a role="button" class="btn btn-sm btn-outline-secondary" href="#">hello </a>                             
                 </form>
             </nav>
             <table class="table table-hover">
@@ -30,19 +28,26 @@
                         <td>Avatar</td>
                         <td>Role</td>
                         <td>Status</td>
-                        <td>Action</td>
                     </tr>
                 </thead>
-                <c:if test="${sessionScope.a.role==true}" >
+
                     <tbody>
                         <c:forEach items="${list}" var="i">
                         <tr>
                             <td>${i.username}</td>
                             <td>${i.password}</td>
                             <td>${i.fullname}</td>
-                            <td>${i.avatar}</td>
-                            <td>${i.role}</td>
-                            <td>${i.status}</td>
+                            <td><img src="images/${i.avatar}" class="img-thumbnail" width="100px"></td>
+                            <c:if test="${i.role==0}" >
+                            <td>Admin</td>
+                            </c:if>
+                            <c:if test="${i.role==1}" >
+                            <td>Writer</td>
+                            </c:if>
+                            <c:if test="${i.role==2}" >
+                            <td>User</td>
+                            </c:if>
+                            <td>${i.status=="true" ? "Active":"Inactive"}</td>
                             <td>
                                 <a role="button" class="btn btn-info" href="updateAccount?username=${i.username}">Update</a>
                                 <a role="button" class="btn btn-danger" href="deleteAccount?username=${i.username}">Delete</a>
@@ -50,32 +55,12 @@
                         </tr>
                         </c:forEach>
                     </tbody>
-                </c:if>
 
-                <c:if test="${sessionScope.a.role==false}" >
-                    <tbody>
-                        <c:forEach items="${list}" var="i">
-                        <c:if test="${sessionScope.a.username==i.username}">
-                            <tr>
-                                <td>${i.username}</td>
-                                <td>${i.password}</td>
-                                <td>${i.fullname}</td>
-                                <td>${i.avatar}</td>
-                                <td>${i.role==true ? "Admin":"User"}</td>
-                                <td>${i.status=="true" ? "Active":"Inactive"}</td>
-                                <td>
-                                    <a role="button" class="btn btn-info" href="updateAccount?username=${i.username}">Update</a>
-                                </td>
-                            </tr>
-                        </c:if>
-                        </c:forEach>
-                    </tbody>
-                </c:if>
+
+                
+             
             </table>
-
-            <c:if test="${sessionScope.a.role==true}" >
                 <a role="button" class="btn btn-secondary" href="addAccount">Create new user</a>
-            </c:if>
             <a role="button" class="btn btn-outline-success" href="home">Back to homepage</a>
         </div>
     </body>

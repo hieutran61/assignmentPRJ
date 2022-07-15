@@ -3,8 +3,10 @@ package DAO;
 
 import helpers.DBUtils;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -183,6 +185,71 @@ public class DAO {
             e.printStackTrace();
         }
     }
+     public List<Account> getAllAccount() throws SQLException
+    {
+	List<Account> list = new ArrayList<>();
+	String sql = "select * from ACCOUNT";
+	
+	try {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+            rs = stm.executeQuery();               
+
+			
+            while (rs.next())
+            {
+                list.add((Account) new Account(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getBoolean(6)));
+            }
+            return list;
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public Account getAccount(String username)
+    {
+	String sql = "select * from ACCOUNT where username = ?";
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, username);
+            rs = stm.executeQuery();               
+            while (rs.next())
+            {
+                return (Account)new Account(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getBoolean(6));  
+            }
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+	return null;
+    }
+    public void updateAccount(String username, String password, String fullname,String avatar, String role, String status)
+    {
+	String sql = "UPDATE ACCOUNT\n" +
+                    "SET Password = ?, Fullname = ?, Avatar=?, Role = ?, Status = ?\n" +
+                    "WHERE Username = ?;";
+	
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, password);
+            stm.setString(2, fullname);
+            stm.setString(3, avatar);
+            stm.setString(4, role);
+            stm.setString(5, status);
+            stm.setString(6, username);
+                        
+            stm.executeUpdate();
+
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
     public Account login(String username, String password)
     {
@@ -213,5 +280,7 @@ public class DAO {
         DAO dao = new DAO();
         System.out.println(dao.getArticle3Days());
     }
+
+    
     
 }
