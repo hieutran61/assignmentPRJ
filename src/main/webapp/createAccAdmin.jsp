@@ -46,7 +46,7 @@
                     <div class="contact-form">
                         <h3 style="color: blue">Tạo tài khoản</h3><br>
                         <!-- Contact Form -->
-                        <form action="CreateAccAdminServlet" method="post">
+                        <form action="createAcc" method="post">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="group">
@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="col-12 ">
                                     <div class="group">
-                                        <input type="password" name="password" id="password" required>
+                                        <input type="password" name="re_password" id="re_password" required>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>Nhập lại mật khẩu</label>

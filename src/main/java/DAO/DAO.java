@@ -250,6 +250,22 @@ public class DAO {
             e.printStackTrace();
         }
     }
+     public void deleteAccount(String username)
+    {
+	String sql = "DELETE FROM ACCOUNT WHERE username = ?";
+	
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, username);                     
+            stm.executeUpdate();
+
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
     public Account login(String username, String password)
     {
