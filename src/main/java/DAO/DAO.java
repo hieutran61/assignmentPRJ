@@ -5,8 +5,10 @@ import helpers.DBUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+import model.Account;
 import model.Article;
 import model.Category;
 
@@ -109,6 +111,31 @@ public class DAO {
         }
         return null;
     }
+    
+    public void createArticle(String title, String description, String content, String image, String author, String likes, Timestamp timePost, String cateId)
+    {
+	String sql = "INSERT INTO ARTICLE\n" +
+                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+	
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, title);
+            stm.setString(2, description);
+            stm.setString(3, content);
+            stm.setString(4, image);
+            stm.setString(5, author);
+            stm.setString(6, likes);
+            stm.setTimestamp(7, timePost);
+            stm.setString(8, cateId);
+
+            stm.executeUpdate();
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     //END DAO ARTICLE
     
     //BEGIN DAO CATEGORY
@@ -134,6 +161,8 @@ public class DAO {
         return null;
     }
     //END DAO CATEGORY
+    
+    //BEGIN DAO ACCOUNT
     public void addAccount(String username, String password, String fullname, String role, String status)
     {
 	String sql = "INSERT INTO ACCOUNT\n" +
@@ -154,6 +183,30 @@ public class DAO {
             e.printStackTrace();
         }
     }
+    
+    public Account login(String username, String password)
+    {
+        String sql = "select * from ACCOUNT where Username = ? and Password = ?";
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, username);
+            stm.setString(2, password);
+            rs = stm.executeQuery();               
+            while (rs.next())
+            {
+                return (Account)new Account(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getBoolean(6));  
+            }
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+	return null;
+    }
+    //END DAO ACCOUNT
+    
+    
     
     
     public static void main(String[] args) {

@@ -43,7 +43,7 @@
                             <div class="contact-form">
                                 <h5>Viết bài mới...</h5>
                                 <!-- Write news form -->
-                                <form action="#" method="post">
+                                <form action="createNews" method="post" enctype="multipart/form-data">
                                     <div class="column">
                                         <div class="col-12 col-md-12">
                                             <div class="group">
@@ -63,7 +63,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="group">
-                                                <textarea style="height: 175px" name="message" id="message" required></textarea>
+                                                <textarea style="height: 175px" name="content" id="message" required></textarea>
                                                 <span class="highlight"></span>
                                                 <span class="bar"></span>
                                                 <label>Nội dung bài viết...</label>
@@ -71,21 +71,22 @@
                                         </div>
                                         <div class="col-12" style="margin-bottom: 25px">
                                             <div class="">
-                                                <input type="file" placeholder="Chọn ảnh cho bài viết">
+                                                <input type="file" name="image" placeholder="Chọn ảnh cho bài viết" required>
                                             </div>
                                         </div>
+                                        <input type="text" name="author" value="${sessionScope.acc.username}">
                                         <div class="col-12">
                                             <div class="">
                                             <label>Chọn thể loại cho bài viết</label>
-                                            <select name="category">
-                                                <option value="thoisu">Thời sự</option>
-                                                <option value="congnghe">Công nghệ</option>
-                                                <option value="vanhoa">Văn hóa</option>
-                                                <option value="giaoduc">Giáo dục</option>
-                                                <option value="dulich">Du lịch</option>
-                                                <option value="suckhoe">Sức khỏe</option>
-                                                <option value="xe">Xe</option>
-                                                <option value="thegioi">Thế giới</option>
+                                            <select name="cateId">
+                                                <option value="1">Thời sự</option>
+                                                <option value="2">Công nghệ</option>
+                                                <option value="3">Văn hóa</option>
+                                                <option value="4">Giáo dục</option>
+                                                <option value="5">Du lịch</option>
+                                                <option value="6">Sức khỏe</option>
+                                                <option value="7">Xe</option>
+                                                <option value="8">Thế giới</option>
                                             </select><br>
                                             </div>
                                         </div>

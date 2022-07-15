@@ -12,7 +12,7 @@
     <body>
         <div class="sidenav">
             <div class="login-main-text">
-                <h2>Báo LD<br>Trang đăng nhập</h2>
+                <h2>Lại Đọc Báo<br>Trang đăng nhập</h2>
                 <p>Đăng nhập hoặc đăng kí để tiếp tục</p>
             </div>
         </div>
@@ -22,11 +22,11 @@
                     <form>
                         <div style="margin-top: 10px" class="form-group">
                             <label>Tên người dùng</label>
-                            <input type="text" class="form-control" placeholder="Tên người dùng">
+                            <input type="text" name="username" class="form-control" placeholder="Tên người dùng">
                         </div>
                         <div class="form-group">
                             <label>Mật khẩu</label>
-                            <input type="password" class="form-control" placeholder="Mật khẩu">
+                            <input type="password" name="password" class="form-control" placeholder="Mật khẩu">
                         </div>
                         <button type="submit" class="btn btn-black">Đăng nhập</button>
                         <button type="submit" class="btn btn-secondary">Đăng kí</button>
