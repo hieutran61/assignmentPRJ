@@ -123,7 +123,7 @@
                                                 <div class="single-blog-post">
                                                     <!-- Post Thumbnail -->
                                                     <div class="post-thumbnail">
-                                                        <img src="images/1.jpg" alt="" style="width: 350px; height:190px">
+                                                        <img src="images/${i.image}" alt="" style="width: 350px; height:190px">
                                                     </div>
                                                     <!-- Post Content -->
                                                     <div class="post-content">
@@ -147,7 +147,7 @@
                                             <div class="single-blog-post post-style-2 d-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
                                                 <!-- Post Thumbnail -->
                                                 <div class="post-thumbnail">
-                                                    <img src="images/5.jpg" alt="" style="width: 97px; height: 97px">
+                                                    <img src="images/${i.image}" alt="" style="width: 97px; height: 97px">
                                                 </div>
                                                 <!-- Post Content -->
                                                 <div class="post-content">
@@ -192,6 +192,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <c:set var="dem" value="${dem+1}"/>
                                                         </c:forEach>
                                                     </div>
                                                 </div>
@@ -216,7 +217,7 @@
                                                         <div class="single-blog-post">
                                                             <!-- Post Thumbnail -->
                                                             <div class="post-thumbnail">
-                                                                <img src="images/1.jpg" alt="">
+                                                                <img src="images/${a.image}" alt="">
                                                             </div>
                                                             <!-- Post Content -->
                                                             <div class="post-content">
@@ -246,7 +247,7 @@
                                                     <div class="single-blog-post post-style-2 d-flex align-items-center">
                                                         <!-- Post Thumbnail -->
                                                         <div class="post-thumbnail">
-                                                            <img src="img/blog-img/b10.jpg" alt="">
+                                                            <img src="images/${a.image}" alt="">
                                                         </div>
                                                         <!-- Post Content -->
                                                         <div class="post-content">
@@ -281,7 +282,7 @@
                                                                 <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
                                                                     <!-- Post Thumbnail -->
                                                                     <div class="post-thumbnail">
-                                                                        <img src="images/1.jpg" alt="">
+                                                                        <img src="images/${i.image}" alt="">
                                                                     </div>
                                                                     <!-- Post Content -->
                                                                     <div class="post-content">
@@ -1593,7 +1594,7 @@
                         <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
                             <!-- Post Thumbnail -->
                             <div class="post-thumbnail">
-                                <img src="img/blog-img/b18.jpg" alt="">
+                                <img src="images/${i.image}" alt="">
                             </div>
                             <!-- Post Content -->
                             <div class="post-content">

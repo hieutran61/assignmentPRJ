@@ -19,7 +19,7 @@ import model.Account;
  *
  * @author ACER
  */
-@WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
+@WebServlet(name = "LoginServlet", urlPatterns = {"/login"})
 public class LoginServlet extends HttpServlet {
 
 
@@ -29,6 +29,7 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession();
+        request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 
     @Override

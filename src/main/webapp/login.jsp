@@ -19,7 +19,7 @@
         <div class="main">
             <div class="col-md-6 col-sm-12">
                 <div class="login-form">
-                    <form>
+                    <form action="login" method="post">
                         <div style="margin-top: 10px" class="form-group">
                             <label>Tên người dùng</label>
                             <input type="text" name="username" class="form-control" placeholder="Tên người dùng">
