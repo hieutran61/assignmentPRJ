@@ -23,10 +23,6 @@
 * {
   margin: 0;
   padding: 0; }
-.container {
-    display: flex;
-}
-
 body {
   font-family: "Work Sans", sans-serif; }
 
