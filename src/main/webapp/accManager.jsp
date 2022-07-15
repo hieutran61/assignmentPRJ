@@ -50,7 +50,7 @@
                             <td>${i.status=="true" ? "Active":"Inactive"}</td>
                             <td>
                                 <a role="button" class="btn btn-info" href="updateAccount?username=${i.username}">Update</a>
-                                <a role="button" class="btn btn-danger" href="deleteAccount?username=${i.username}">Delete</a>
+                                <a role="button" class="btn btn-danger" href="DeleteAccount?username=${i.username}">Delete</a>
                             </td>
                         </tr>
                         </c:forEach>
@@ -60,7 +60,7 @@
                 
              
             </table>
-                <a role="button" class="btn btn-secondary" href="addAccount">Create new user</a>
+                <a role="button" class="btn btn-secondary" href="createAcc">Create new user</a>
             <a role="button" class="btn btn-outline-success" href="home">Back to homepage</a>
         </div>
     </body>

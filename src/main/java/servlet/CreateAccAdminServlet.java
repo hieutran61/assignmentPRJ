@@ -41,7 +41,7 @@ public class CreateAccAdminServlet extends HttpServlet {
         
         DAO dao = new DAO();
         dao.addAccount(account, password, fullname, role, status);   
-        response.sendRedirect("home");
+        response.sendRedirect("accManager");
     }
 
     
