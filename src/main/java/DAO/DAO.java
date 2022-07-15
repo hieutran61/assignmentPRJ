@@ -88,6 +88,27 @@ public class DAO {
         return null;
     }
     
+    public Article getArticle(String articleId)
+    {
+        String sql = "select * from ARTICLE where ArticleID=?";
+	
+	try {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+            stm.setString(1, articleId);
+            rs = stm.executeQuery();               
+	
+            while (rs.next())
+            {
+                return ((Article) new Article(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getInt(7), rs.getTimestamp(8), rs.getInt(9)));
+            }
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
     public List<Article> getTopStories()
     {
         List<Article> list = new ArrayList<>();

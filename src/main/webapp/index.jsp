@@ -172,7 +172,7 @@
                                                 <div class="single-cata-slide">
                                                     <div class="row">
                                                     <c:set var="dem" value="8"/>
-                                                        <c:forEach items="${aArticle3Days}" var="i" begin="${dem}" end="${((dem+6) < aArticle3Days.size()) ? (dem+6):aArticle3Days.size()}" >
+                                                        <c:forEach items="${aArticle3Days}" var="i" begin="${dem}" end="${((dem+5) < aArticle3Days.size()) ? (dem+5):aArticle3Days.size()}" >
                                                         <div class="col-12 col-md-6">
                                                             <!-- Single Blog Post -->
                                                             <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
@@ -192,7 +192,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <c:set var="dem" value="${dem+1}"/>
+                                                        <%-- <c:set var="dem" value="${dem+1}"/> --%>
                                                         </c:forEach>
                                                     </div>
                                                 </div>
