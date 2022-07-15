@@ -16,7 +16,10 @@
                                 <li class="nav-item active">
                                     <a class="nav-link" href="home">Trang Chủ <span class="sr-only">(current)</span></a>
                                 </li>
-                                <li class="nav-item dropdown">
+                                <li class="nav-item" >
+                                    <a class="nav-link" href="createNews.jsp" style="color: blue">Viết Bài</a>
+                                </li>
+<!--                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="catelory.jsp">Catelory</a>
@@ -24,7 +27,7 @@
                                         <a class="dropdown-item" href="regular-page.jsp">Regular Page</a>
                                         <a class="dropdown-item" href="contact.jsp">Contact</a>
                                     </div>
-                                </li>
+                                </li>-->
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Thời sự</a>
                                 </li>
@@ -63,11 +66,8 @@
                                     <img width="35" class="rounded-circle" src="images/6.png" alt="">
                                     <i class="fa fa-angle-down ml-2 opacity-8" style="color: white;"></i>
                                 </a>
-                                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                                    <button type="button" tabindex="0" class="dropdown-item">User Account</button>
-                                    <button type="button" tabindex="0" class="dropdown-item">Settings</button>
-                                    <h6 tabindex="-1" class="dropdown-header">Header</h6>
-                                    <button type="button" tabindex="0" class="dropdown-item">Actions</button>
+                                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">                                
+                                    <button type="button" tabindex="0" class="dropdown-item">Cài đặt tài khoản</button>
                                     <div tabindex="-1" class="dropdown-divider"></div>
                                     <button type="button" tabindex="0" class="dropdown-item">Đăng xuất</button>
                                 </div>
