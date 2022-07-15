@@ -316,7 +316,24 @@ public class DAO {
             e.printStackTrace();
         }
     }
+     public void deleteArticle(String articleId)
+    {
+	String sql = "DELETE FROM ARTICLE WHERE ArticleId = ?";
+	
+	try 
+        {
+            con = DBUtils.makeConnection();
+            stm = con.prepareStatement(sql);
+	    stm.setString(1, articleId);                     
+            stm.executeUpdate();
+
+        } 
+	catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
+   
     public Account login(String username, String password)
     {
         String sql = "select * from ACCOUNT where Username = ? and Password = ?";

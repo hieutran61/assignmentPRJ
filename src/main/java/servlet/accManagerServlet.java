@@ -19,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.Account;
 
-@WebServlet(name = "AccManagerServlet", urlPatterns = {"/accManager"})
-public class AccManagerServlet extends HttpServlet {
+@WebServlet(name = "accManagerServlet", urlPatterns = {"/accManager"})
+public class accManagerServlet extends HttpServlet {
 
    
     @Override
