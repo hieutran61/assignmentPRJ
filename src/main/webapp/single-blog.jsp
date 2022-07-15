@@ -18,6 +18,8 @@
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Like Button CSS -->
+    <link rel="stylesheet" href="css/likeButton.css">
 
 </head>
 
@@ -40,8 +42,6 @@
             <div class="row h-100 align-items-center justify-content-center">
                 <div class="col-12 col-md-8 col-lg-6">
                     <div class="single-blog-title text-center">
-<!--                         Catagory 
-                        <div class="post-cta"><a href="#">travel</a></div>-->
                         <h3>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h3>
                     </div>
                 </div>
@@ -80,184 +80,51 @@
                             </ul>
                             <!-- Post Meta -->
                             <div class="post-meta second-part">
-                                <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
+                                <p class="likebtn">
+                                    <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span> Love it</a>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- ========== right page  ========== -->
-            <jsp:include page="rightpage.jsp"></jsp:include>
-                
-                
-<!--                         Widget Area 
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Today’s Pick</h5>
-                            <div class="widget-content">
-                                 Single Blog Post 
-                                <div class="single-blog-post todays-pick">
-                                     Post Thumbnail 
-                                    <div class="post-thumbnail">
-                                        <img src="img/blog-img/b22.jpg" alt="">
-                                    </div>
-                                     Post Content 
-                                    <div class="post-content px-0 pb-0">
-                                        <a href="#" class="headline">
-                                            <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
-                    </div>
-                </div>
+                <jsp:include page="rightpage.jsp"></jsp:include>
+                   
             </div>
 
-<!--             ============== Related Post ============== 
             <div class="row">
-                <div class="col-12 col-md-6 col-lg-4">
-                     Single Blog Post 
-                    <div class="single-blog-post">
-                         Post Thumbnail 
-                        <div class="post-thumbnail">
-                            <img src="img/blog-img/b1.jpg" alt="">
-                             Catagory 
-                            <div class="post-cta"><a href="#">travel</a></div>
-                        </div>
-                         Post Content 
-                        <div class="post-content">
-                            <a href="#" class="headline">
-                                <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
-                            </a>
-                            <p>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in...</p>
-                             Post Meta 
-                            <div class="post-meta">
-                                <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                     Single Blog Post 
-                    <div class="single-blog-post">
-                         Post Thumbnail 
-                        <div class="post-thumbnail">
-                            <img src="img/blog-img/b2.jpg" alt="">
-                             Catagory 
-                            <div class="post-cta"><a href="#">travel</a></div>
-                        </div>
-                         Post Content 
-                        <div class="post-content">
-                            <a href="#" class="headline">
-                                <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
-                            </a>
-                            <p>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in...</p>
-                             Post Meta 
-                            <div class="post-meta">
-                                <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                     Single Blog Post 
-                    <div class="single-blog-post">
-                         Post Thumbnail 
-                        <div class="post-thumbnail">
-                            <img src="img/blog-img/b7.jpg" alt="">
-                             Catagory 
-                            <div class="post-cta"><a href="#">travel</a></div>
-                             Video Button 
-                            <a href="https://www.youtube.com/watch?v=IhnqEwFSJRg" class="video-btn"><i class="fa fa-play"></i></a>
-                        </div>
-                         Post Content 
-                        <div class="post-content">
-                            <a href="#" class="headline">
-                                <h5>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in Physics?</h5>
-                            </a>
-                            <p>How Did van Gogh’s Turbulent Mind Depict One of the Most Complex Concepts in...</p>
-                             Post Meta 
-                            <div class="post-meta">
-                                <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
-
-            <div class="row">
-                <div class="col-12 col-lg-8" style="margin-left: 200px">
+                <div class="col-12 col-lg-8">
                     <div class="post-a-comment-area mt-70">
-                        <h5>Bình luận</h5> 
-                        <form action="#" method="post">
+                        <h5>Bình luận</h5>
+                        <!-- Comment Form -->
+                        <form action="comment" method="post">
                             <div class="row">
-<!--                                <div class="col-12 col-md-6">
-                                    <div class="group">
-                                        <input type="text" name="name" id="name" required>
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <label>Enter your name</label>
-                                    </div>
-                                </div>-->
-<!--                                <div class="col-12 col-md-6">
-                                    <div class="group">
-                                        <input type="email" name="email" id="email" required>
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span>
-                                        <label>Enter your email</label>
-                                    </div>
-                                </div>-->
                                 <div class="col-12">
                                     <div class="group">
-                                        <textarea name="message" id="message" required></textarea>
+                                        <textarea name="cmt" id="message" required></textarea>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>Nhập bình luận</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn world-btn">Đăng</button>
+                                    <button type="submit" class="btn world-btn">Post comment</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-8" style="margin-left: 200px">
+                <div class="col-12 col-lg-8">
+                    <!-- Comment Area Start -->
                     <div class="comment_area clearfix mt-70">
                         <ol>
+                            <!-- Single Comment Area -->
                             <li class="single_comment_area">
-                                 
+                                <!-- Comment Content -->
                                 <div class="comment-content">
-                                    
-                                    <div class="comment-meta d-flex align-items-center justify-content-between">
-                                        <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
-                                        <a href="#" class="comment-reply btn world-btn">Reply</a>
-                                    </div>
-                                    <p>Pick the yellow peach that looks like a sunset with its red, orange, and pink coat skin, peel it off with your teeth. Sink them into unripened...</p>
-                                </div>
-                                <ol class="children">
-                                    <li class="single_comment_area">
-                                    
-                                        <div class="comment-content">
-                                      
-                                            <div class="comment-meta d-flex align-items-center justify-content-between">
-                                                <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
-                                                <a href="#" class="comment-reply btn world-btn">Reply</a>
-                                            </div>
-                                            <p>Pick the yellow peach that looks like a sunset with its red, orange, and pink coat skin, peel it off with your teeth. Sink them into unripened...</p>
-                                        </div>
-                                    </li>
-                                </ol>
-                            </li>
-                            
-                         
-                            <li class="single_comment_area">
-                           
-                                <div class="comment-content">
-                           
+                                    <!-- Comment Meta -->
                                     <div class="comment-meta d-flex align-items-center justify-content-between">
                                         <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
                                         <a href="#" class="comment-reply btn world-btn">Reply</a>
@@ -265,7 +132,6 @@
                                     <p>Pick the yellow peach that looks like a sunset with its red, orange, and pink coat skin, peel it off with your teeth. Sink them into unripened...</p>
                                 </div>
                             </li>
-                            
                         </ol>
                     </div>
                 </div>
@@ -288,7 +154,8 @@
     <script src="js/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-
+    <!-- Like Button js -->
+    <script src="js/likeButton.js"></script>
 </body>
 
 </html>
