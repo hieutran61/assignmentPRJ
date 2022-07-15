@@ -29,10 +29,13 @@ public class DeleteAccountServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-            String username = request.getParameter("username");          
-                DAO dao = new DAO();
-                dao.deleteAccount(username);          
-            request.getRequestDispatcher("accManager").forward(request, response);      
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
+        
+        String username = request.getParameter("username");          
+            DAO dao = new DAO();
+            dao.deleteAccount(username);          
+        request.getRequestDispatcher("accManager").forward(request, response);      
         
     }
 

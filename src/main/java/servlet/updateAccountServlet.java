@@ -29,6 +29,7 @@ public class UpdateAccountServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
        
         
             String username = request.getParameter("username");
@@ -45,6 +46,9 @@ public class UpdateAccountServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
+        
         String mk = request.getParameter("mk");
         String username = request.getParameter("username");
         String old_password = request.getParameter("old-password");

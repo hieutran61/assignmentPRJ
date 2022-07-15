@@ -28,10 +28,13 @@ public class DeleteArticleServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-          String articleId = request.getParameter("articleId");          
-                DAO dao = new DAO();
-                dao.deleteArticle(articleId);          
-            request.getRequestDispatcher("ManagerAriticle").forward(request, response); 
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
+        
+        String articleId = request.getParameter("articleId");          
+        DAO dao = new DAO();
+        dao.deleteArticle(articleId);          
+        request.getRequestDispatcher("ManagerAriticle").forward(request, response); 
     }
 
     @Override

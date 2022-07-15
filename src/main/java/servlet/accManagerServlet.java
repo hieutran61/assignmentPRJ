@@ -6,7 +6,6 @@ package servlet;
 
 import DAO.DAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
@@ -28,6 +27,7 @@ public class accManagerServlet extends HttpServlet {
             throws ServletException, IOException {
          response.setContentType("text/html;charset=UTF-8");
          request.setCharacterEncoding("utf-8");
+         
          try {           
                 DAO dao = new DAO();
                 List<Account> list = dao.getAllAccount();

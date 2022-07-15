@@ -24,6 +24,8 @@ public class ArticleServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
+        
         DAO dao = new DAO();
         List<Article> aArticle3Days = dao.getArticle3Days();
         List<Article> aArticleLatest = dao.getLatestArticle();

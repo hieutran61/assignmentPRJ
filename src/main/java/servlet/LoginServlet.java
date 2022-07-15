@@ -28,6 +28,8 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
+        
         HttpSession session = request.getSession();
         request.getRequestDispatcher("login.jsp").forward(request, response);
     }
@@ -36,6 +38,8 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
+        
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         DAO dao = new DAO();

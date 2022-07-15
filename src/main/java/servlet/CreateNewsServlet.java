@@ -34,6 +34,7 @@ public class CreateNewsServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("utf-8");
+        
         String title = request.getParameter("title");
         String description = request.getParameter("description");
         String content = request.getParameter("content");
