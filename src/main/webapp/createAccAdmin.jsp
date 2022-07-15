@@ -46,7 +46,7 @@
                     <div class="contact-form">
                         <h3 style="color: blue">Tạo tài khoản</h3><br>
                         <!-- Contact Form -->
-                        <form action="#" method="post">
+                        <form action="CreateAccAdminServlet" method="post">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="group">

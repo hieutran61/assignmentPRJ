@@ -19,6 +19,10 @@ public class CreateAccAdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+         response.setContentType("text/html;charset=UTF-8");
+         request.setCharacterEncoding("utf-8");
+         response.setContentType("text/html;charset=UTF-8");
+         
         request.getRequestDispatcher("createAccAdmin.jsp").forward(request, response);
     }
 
@@ -26,6 +30,10 @@ public class CreateAccAdminServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;charset=UTF-8");
+        
         String account = request.getParameter("username");
         String password = request.getParameter("password");
         String re_password = request.getParameter("re_password");

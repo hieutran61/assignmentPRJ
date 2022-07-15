@@ -9,7 +9,7 @@
                         <a href="#"><img src="images/logo.png" alt=""></a>
                         <div class="copywrite-text mt-30">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> 
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.facebook.com/O.wellcome.to.wall.of.Quoc" target="_blank">Hội Tam Hoàng</a> 
 <p>Proudly distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div>

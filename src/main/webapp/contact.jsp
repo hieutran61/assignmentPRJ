@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="group">
-                                        <textarea name="message" id="message" required></textarea>
+                                        <textarea name="message" style="height: 600px" id="message" required ></textarea>
                                         <span class="highlight"></span>
                                         <span class="bar"></span>
                                         <label>Enter your message</label>

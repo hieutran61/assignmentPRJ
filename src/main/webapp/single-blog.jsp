@@ -188,7 +188,7 @@
             </div>-->
 
             <div class="row">
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-lg-8" style="margin-left: 200px">
                     <div class="post-a-comment-area mt-70">
                         <h5>Bình luận</h5> 
                         <form action="#" method="post">
@@ -225,13 +225,13 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-lg-8" style="margin-left: 200px">
                     <div class="comment_area clearfix mt-70">
                         <ol>
                             <li class="single_comment_area">
-                                 Comment Content 
+                                 
                                 <div class="comment-content">
-                                     Comment Meta 
+                                    
                                     <div class="comment-meta d-flex align-items-center justify-content-between">
                                         <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
                                         <a href="#" class="comment-reply btn world-btn">Reply</a>
@@ -240,9 +240,9 @@
                                 </div>
                                 <ol class="children">
                                     <li class="single_comment_area">
-                                         Comment Content 
+                                    
                                         <div class="comment-content">
-                                             Comment Meta 
+                                      
                                             <div class="comment-meta d-flex align-items-center justify-content-between">
                                                 <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
                                                 <a href="#" class="comment-reply btn world-btn">Reply</a>
@@ -253,11 +253,11 @@
                                 </ol>
                             </li>
                             
-                             Single Comment Area 
+                         
                             <li class="single_comment_area">
-                                 Comment Content 
+                           
                                 <div class="comment-content">
-                                     Comment Meta 
+                           
                                     <div class="comment-meta d-flex align-items-center justify-content-between">
                                         <p><a href="#" class="post-author">Katy Liu</a> on <a href="#" class="post-date">Sep 29, 2017 at 9:48 am</a></p>
                                         <a href="#" class="comment-reply btn world-btn">Reply</a>

@@ -6,7 +6,7 @@
                         <div class="sidebar-widget-area">
                             <h5 class="title">About World</h5>
                             <div class="widget-content">
-                                <p>The mango is perfect in that it is always yellow and if it’s not, I don’t want to hear about it. The mango’s only flaw, and it’s a minor one, is the effort it sometimes takes to undress the mango, carve it up in a way that makes sense, and find its way to the mouth.</p>
+                                <p>Các sinh vật đang sống trên địa cầu này, dù là con người hay con vật, là để cống hiến, theo cách riêng của mình, cho cái đẹp và sự thịnh vượng của thế giới.</p>
                             </div>
                         </div>
                         <!-- Widget Area -->
